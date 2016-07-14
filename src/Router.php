@@ -11,7 +11,7 @@
  * @copyright Akufen Atelier Creatif
  * @author    Nicholas Charbonneau <nicholas@akufen.ca>
  * @license   http://opensource.org/licenses/MIT
- * @version   0.1.0
+ * @version   0.1.2
  * @link      https://github.com/akufenstudio/orchestra-skeleton
  */
 
@@ -40,10 +40,9 @@ class Router extends \Phalcon\Mvc\Router\Group
         ));
 
         // Default route
-        $this->add('/:params', array(
-            'controller' => 'index',
-            'action' => 'index',
-            'params' => 1
+        $this->add('/404', array(
+            'controller' => 'error',
+            'action' => 'show404'
         ));
     }
 }
